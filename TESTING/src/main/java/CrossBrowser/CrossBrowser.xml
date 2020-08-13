@@ -1,0 +1,7 @@
+<suite name="SmokeSuite1">
+    <test name="SmokeTest1">
+        <classes>
+
+        </classes>
+    </test>
+</suite>
