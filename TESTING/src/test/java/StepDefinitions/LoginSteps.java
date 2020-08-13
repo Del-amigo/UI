@@ -14,7 +14,7 @@ public class LoginSteps {
     @Given("^Navigate to website$")
     public void navigate_to_website()  {
         driver = Driver.getDriver();
-        driver.get("D:\\QA COURSE\\HelloScrumProject\\UI\\Login.html");
+        driver.get("D:\\HelloScrumProject\\UI\\Login.html");
         driver.manage().window().maximize();
     }
 
