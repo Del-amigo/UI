@@ -53,25 +53,25 @@ formatter.match({
   "location": "LoginSteps.navigate_to_website()"
 });
 formatter.result({
-  "duration": 5857608050,
+  "duration": 5825322467,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.enter_invalid_username_and_invalid_password()"
 });
 formatter.result({
-  "duration": 484659552,
+  "duration": 603421752,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginSteps.user_should_not_login_successfully_and_error_message_will_display()"
 });
 formatter.result({
-  "duration": 3784534,
+  "duration": 6095046,
   "status": "passed"
 });
 formatter.after({
-  "duration": 325674,
+  "duration": 656085,
   "status": "passed"
 });
 });
