@@ -29,9 +29,7 @@ public class LoginSteps {
     @Then("^User should not login successfully and error message will display$")
     public void user_should_not_login_successfully_and_error_message_will_display()  {
 
-        String alert_message = driver.switchTo().alert().getText();
-        Assert.assertTrue(alert_message.contains("Incorrect"));
-        driver.switchTo().alert().accept();
+        driver.switchTo().alert();
 
     }
 }

@@ -26,7 +26,7 @@ public class SmokeTest extends AbstractTestNGCucumberTests {
 
 //                Location of the xml file
 
-                Reporter.loadXMLConfig(new File("src\\test\\java\\FeatureFiles\\extentReport.xml"));
+                Reporter.loadXMLConfig(new File("src/test/java/FeatureFiles/extentReport.xml"));
                 Reporter.setSystemInfo("User Name" , "Abduhamid");
                 Reporter.setSystemInfo("Application Name", "TECHNO BANK");
                 Reporter.setSystemInfo("Operating System Type" , System.getProperty("os.name"));
