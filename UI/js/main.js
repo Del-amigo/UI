@@ -1,17 +1,18 @@
 function clicked() {
-  var user = document.getElementById('username');
-  var pass = document.getElementById('password');
-
-  var coruser = 'admin';
-  var corpass = 'admin123';
-
-  if (user.value == coruser) {
-    if (pass.value == corpass) {
-      window.alert('You are logged in as ' + user.value);
-    } else {
-      window.alert('Incorrect username or password ' + user.value);
-    }
+  var uname = document.getElementById("email").value;
+  var pwd = document.getElementById("pwd1").value;
+  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  if (uname == '') {
+    alert(" ** Please enter Userame");
+  } else if (pwd == '') {
+    alert("** Please enter Password");
+  } else if (!filter.test(uname)) {
+    alert("** Enter valid email");
+  } else if (uname != "technobank" && pwd != 123456789) {
+    alert("Invalid credentials, please provide correct username and password");
+  } else if (pwd.length < 2 || pwd.length > 10) {
+    alert("Password min and max length is 9.");
   } else {
-    window.alert('Incorrect username or password ' + user.value);
+    window.location = "Hompage.html";
   }
 }
