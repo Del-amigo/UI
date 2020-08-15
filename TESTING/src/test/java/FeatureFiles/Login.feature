@@ -1,5 +1,6 @@
 Feature: Login Functionality
 
+  @SmokeTest
   Scenario Outline: Login with valid username and password (Positive scenario)
 
     Given Navigate to website
@@ -10,7 +11,7 @@ Feature: Login Functionality
       | admin    | admin123 |
 
 
-  @SmokeTest
+  @RegressionTest
   Scenario Outline: Login with valid username and an invalid password (Negative scenario)
 
     Given Navigate to website
@@ -21,6 +22,7 @@ Feature: Login Functionality
       | admin    | admin1   |
 
 
+  @RegressionTest
   Scenario: Login with invalid username and an invalid password (Negative scenario)
 
     Given Navigate to website
@@ -28,6 +30,7 @@ Feature: Login Functionality
     Then User should not login successfully and error message will display
 
 
+  @RegressionTest
   Scenario Outline: Login with invalid username and valid password (Negative scenario)
 
     Given Navigate to website
@@ -37,6 +40,8 @@ Feature: Login Functionality
       | username  | password |
       | admin2020 | admin123 |
 
+
+  @RegressionTest
   Scenario: Login with with inactive credentials (Positive scenario)
 
 #    Given Navigate to website
@@ -44,7 +49,7 @@ Feature: Login Functionality
 #    Then User should not login successfully and error message will display
 
 
-
+  @RegressionTest
   Scenario Outline: Login page for both, when the field is blank and Submit button is clicked
     Given Navigate to website
     When Enter empty "<username>" and empty "<password>"
@@ -54,6 +59,7 @@ Feature: Login Functionality
       |          |          |
 
 
+  @RegressionTest
   Scenario: Verify if the data in password field is either visible as asterisk or bullet signs.
 
 #    Given Navigate to website

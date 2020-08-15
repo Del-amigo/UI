@@ -8,5 +8,10 @@ public class HomePagePOM extends ParentClass{
     WebElement myElement;
 
     @FindBy(css = "p[class='fa fa-user']")
-    private WebElement userName_label;
+    public WebElement userName_label;
+
+    @FindBy(xpath = "//p[@class='fa fa-lock']")
+    public WebElement password_label;
+
+
 }

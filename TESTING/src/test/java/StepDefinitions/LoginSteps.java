@@ -2,7 +2,6 @@ package StepDefinitions;
 
 import POM.LoginPOM;
 import Utilities.Driver;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -33,6 +32,7 @@ public class LoginSteps {
         String alert_message = driver.switchTo().alert().getText();
         Assert.assertTrue(alert_message.contains("Invalid"));
 
+
     }
 
     @When("^Enter valid \"([^\"]*)\" and \"([^\"]*)\"$")
@@ -40,6 +40,7 @@ public class LoginSteps {
         loginPOM.user_input.sendKeys(userName);
         loginPOM.password_input.sendKeys(password);
         loginPOM.login_button.click();
+        System.out.println(loginPOM.password_input.getText());
     }
 
     @Then("^User should login successfully and redirected to appropriate page$")
@@ -47,6 +48,7 @@ public class LoginSteps {
 
         String alert_message = driver.switchTo().alert().getText();
         Assert.assertTrue(alert_message.contains("Invalid"));
+        driver.switchTo().alert().accept();
     }
 
 

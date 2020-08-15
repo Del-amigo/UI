@@ -8,6 +8,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 
+
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -45,7 +46,7 @@ public class Hooks {
             }
         }
 
-//        Driver.QuitDriver();
+        Driver.QuitDriver();
     }
 
 }
